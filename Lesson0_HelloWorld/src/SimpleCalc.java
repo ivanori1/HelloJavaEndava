@@ -2,6 +2,11 @@ import java.util.Scanner;
 
 public class SimpleCalc {
     public static void main(String args[]) {
+        /*
+        Modifikacija digitrona od prošle nedelje: Sve operacije smestiti u posebne metode,
+        i kada je to potrebno pozivati odgovarajuću metodu.
+        Vrteti se u petlji, sve dok se za kod operacije ne unese nepostojeći kod (default kod switch-a).
+         */
 
         Scanner userInput = new Scanner(System.in);
         System.out.println("Unesite dva broja i matematicku operaciju koju zelite");
