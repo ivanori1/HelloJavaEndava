@@ -17,5 +17,6 @@ public class EvenNumber {
                 }
                 prviBroj++;
             }
+            broj.close();
         }
     }
