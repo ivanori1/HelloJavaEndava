@@ -1,6 +1,28 @@
 import java.util.Scanner;
 
 public class SimpleCalc {
+
+    public static void sabiranje(double prviBroj, double drugiBroj) {
+        double rezultat = prviBroj + drugiBroj;
+        System.out.println(rezultat);
+    }
+
+    public static void oduzimanje(double prviBroj, double drugiBroj) {
+        double rezultat = prviBroj - drugiBroj;
+        System.out.println(rezultat);
+    }
+
+    public static void dijeljenje(double prviBroj, double drugiBroj) {
+        double rezultat = prviBroj / drugiBroj;
+        System.out.println(rezultat);
+    }
+
+    public static void mnozenje(double prviBroj, double drugiBroj) {
+        double rezultat = prviBroj * drugiBroj;
+        System.out.println(rezultat);
+    }
+
+
     public static void main(String args[]) {
         /*
         Modifikacija digitrona od prošle nedelje: Sve operacije smestiti u posebne metode,
@@ -17,23 +39,26 @@ public class SimpleCalc {
         double drugiBroj = userInput.nextInt();
 
         System.out.println("Matematicka operacija: (‘s’ – sabiranje, ‘o’ – oduzimanje, ‘m’ – množenje, ‘d’ – dijeljenje)");
+
+
         String matematickaOperacija = userInput.next();
+        switch (matematickaOperacija) {
+            case "s":
+                sabiranje(prviBroj, drugiBroj);
+                break;
+            case "o":
+                oduzimanje(prviBroj, drugiBroj);
+                break;
+            case "m":
+                mnozenje(prviBroj, drugiBroj);
+                break;
+            case "d":
+                dijeljenje(prviBroj, drugiBroj);
+                break;
+            default:
+                System.out.println("Pogresan unos (‘s’ – sabiranje, ‘o’ – oduzimanje, ‘m’ – množenje, ‘d’ – dijeljenje)");
+                break;
 
-        if (matematickaOperacija.equals("s")){
-            System.out.println(prviBroj+drugiBroj);
-        } else if (matematickaOperacija.equals("o")) {
-            System.out.println(prviBroj-drugiBroj);
-        }else if (matematickaOperacija.equals("m")) {
-            System.out.println(prviBroj*drugiBroj);
-        }else if (matematickaOperacija.equals("d")) {
-            if (drugiBroj != 0) {
-                System.out.println(prviBroj/drugiBroj);
-            }else {
-                System.out.println("Nije dozvoljeno dijeljenje sa 0");
-            }
-
-        } else {
-            System.out.println("Pogresan unos (‘s’ – sabiranje, ‘o’ – oduzimanje, ‘m’ – množenje, ‘d’ – dijeljenje)");
         }
         userInput.close();
 
