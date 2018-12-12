@@ -31,6 +31,10 @@ public class SimpleCalc {
          */
 
         Scanner userInput = new Scanner(System.in);
+        boolean izlaz = true;
+        while (izlaz) {
+
+
         System.out.println("Unesite dva broja i matematicku operaciju koju zelite");
         System.out.println("Prvi broj: ");
         double prviBroj = userInput.nextInt();
@@ -57,10 +61,13 @@ public class SimpleCalc {
                 break;
             default:
                 System.out.println("Pogresan unos (‘s’ – sabiranje, ‘o’ – oduzimanje, ‘m’ – množenje, ‘d’ – dijeljenje)");
+                izlaz = false;
                 break;
 
         }
-        userInput.close();
 
+        }
+    userInput.close();
     }
+
 }
