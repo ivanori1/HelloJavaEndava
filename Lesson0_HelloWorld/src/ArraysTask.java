@@ -8,13 +8,17 @@ public class ArraysTask {
 
     public static void main(String[] args) {
 
+        int[] duzinaNiza;
+
         Scanner input = new Scanner(System.in);
         System.out.println("Unesite broj clanova niza");
-        int duzinaNiza = input.nextInt();
+
+        duzinaNiza = new int[input.nextInt()];
         System.out.println("Unesite broj koji je clan niza");
-        int clanoviNiza = 0;
-        for (int x = 0; x < duzinaNiza; x++) {
-            clanoviNiza = input.nextInt();
+        for (int i = 0; i < duzinaNiza.length; i++) {
+            duzinaNiza[i] = input.nextInt();
         }
+
     }
 }
+
