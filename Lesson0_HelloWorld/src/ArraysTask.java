@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArraysTask {
@@ -8,17 +9,21 @@ public class ArraysTask {
 
     public static void main(String[] args) {
 
-        int[] duzinaNiza;
+        int[] niz;
 
         Scanner input = new Scanner(System.in);
         System.out.println("Unesite broj clanova niza");
 
-        duzinaNiza = new int[input.nextInt()];
+        niz = new int[input.nextInt()];
         System.out.println("Unesite broj koji je clan niza");
-        for (int i = 0; i < duzinaNiza.length; i++) {
-            duzinaNiza[i] = input.nextInt();
+        for (int i = 0; i < niz.length; i++) {
+            niz[i] = input.nextInt();
         }
-
+        Arrays.sort(niz);
+        System.out.println("prvih pet clanova niza je: ");
+        for (int i = 0; i < 5; i++) {
+            System.out.println(niz[i]);
+        }
     }
 }
 
