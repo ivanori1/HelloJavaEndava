@@ -15,7 +15,7 @@ public class Elipsa extends Krug {
 
     @Override
     public double obim() {
-        return a * Math.PI * ( 9 - Math.sqrt(35)/2) ;
+        return a * Math.PI * (9 - Math.sqrt(35) / 2);
     }
 
     @Override
@@ -29,8 +29,9 @@ public class Elipsa extends Krug {
         GeometrijskaSlika gs2 = new Krug(5);
         GeometrijskaSlika gs3 = new Elipsa(23, 41);
 
-        System.out.println("String reprezentacija objekta gs1 je " + gs1.toString());
-        System.out.println("String reprezentacija objekta gs2 je " + gs2.toString());
-        System.out.println("String reprezentacija objekta gs3 je " + gs3.toString());
+    }
+
+    public String toString() {
+        return "Povrsina je " + this.povrsina() + "." + " Obim  je " + this.obim();
     }
 }

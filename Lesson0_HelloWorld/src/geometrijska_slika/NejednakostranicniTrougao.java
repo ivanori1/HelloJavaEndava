@@ -34,8 +34,9 @@ public class NejednakostranicniTrougao extends Trougao {
         GeometrijskaSlika gs2 = new Trougao(5);
         GeometrijskaSlika gs3 = new NejednakostranicniTrougao(23, 41, 46);
 
-        System.out.println("String reprezentacija objekta gs1 je " + gs1.toString());
-        System.out.println("String reprezentacija objekta gs2 je " + gs2.toString());
-        System.out.println("String reprezentacija objekta gs3 je " + gs3.toString());
+    }
+
+    public String toString() {
+        return "Povrsina je " + this.povrsina() + "." + " Obim  je " + this.obim();
     }
 }
