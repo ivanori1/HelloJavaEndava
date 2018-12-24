@@ -19,10 +19,17 @@ public class ArraysTask {
         for (int i = 0; i < niz.length; i++) {
             niz[i] = input.nextInt();
         }
+        System.out.println("Unesite trazeni broj");
+        int trazeniBroj = input.nextInt();
+        if (Arrays.asList(niz).contains(trazeniBroj)) {
+            System.out.println("trazeni broj " + trazeniBroj + " je sadrzan u vasoj listi");
+        } else {
+            System.out.println("trazeni broj " + trazeniBroj + " nije sadrzan u vasoj listi");
+        }
         Arrays.sort(niz);
         System.out.println("prvih pet clanova niza je: ");
         for (int i = 0; i < 5; i++) {
-            System.out.println(niz[i]);
+            System.out.println(niz[i]+ " ");
         }
     }
 }
